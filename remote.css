@@ -1,0 +1,4 @@
+.focused {
+  outline: 2px solid #00bfff;
+  background-color: rgba(0, 191, 255, 0.2);
+}
