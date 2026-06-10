@@ -1,5 +1,5 @@
 {
-  "name": "atv_player",
+  "name": "iptv-player",
   "version": "1.0.0",
   "description": "Simple IPTV Player built with Next.js and HLS.js",
   "main": "index.js",
