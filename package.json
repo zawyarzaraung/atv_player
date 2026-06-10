@@ -1,19 +1,19 @@
-iptv-player/
- ├── pages/
- │    ├── index.js              # Channel List UI
- │    ├── player.js             # Video Player Screen
- ├── components/
- │    ├── ChannelList.js        # Channel List Component
- │    ├── VideoPlayer.js        # Video Player Component
- │    ├── RemoteControl.js      # Remote Control Navigation Support
- ├── utils/
- │    ├── playlistParser.js     # M3U Playlist Loader
- │    ├── epgLoader.js          # EPG Integration
- ├── public/
- │    ├── playlist.m3u          # Sample Playlist File
- │    ├── logo.png              # App Logo
- ├── styles/
- │    ├── globals.css           # Global Styles
- │    ├── remote.css            # Remote Control Focus Styles
- ├── package.json
- └── README.md
+{
+  "name": "iptv-player",
+  "version": "1.0.0",
+  "description": "Simple IPTV Player built with Next.js and HLS.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "hls.js": "latest"
+  },
+  "author": "zawyarzaraung",
+  "license": "MIT"
+}
