@@ -1,19 +1,17 @@
-// components/VideoPlayer.js
-import { useEffect, useRef } from "react";
-import Hls from "hls.js";
+// pages/player.js
+import { useRouter } from "next/router";
+import VideoPlayer from "../components/VideoPlayer";
 
-export default function VideoPlayer({ url }) {
-  const videoRef = useRef(null);
+export default function PlayerPage() {
+  const router = useRouter();
+  const { url } = router.query;
 
-  useEffect(() => {
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(url);
-      hls.attachMedia(videoRef.current);
-    } else {
-      videoRef.current.src = url;
-    }
-  }, [url]);
+  if (!url) return <p>No channel selected</p>;
 
-  return <video ref={videoRef} controls autoPlay style={{ width: "100%" }} />;
+  return (
+    <div>
+      <h2>Now Playing</h2>
+      <VideoPlayer url={url} />
+    </div>
+  );
 }
